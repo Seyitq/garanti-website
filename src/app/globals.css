@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0057A8;
+  --color-primary-dark: #004080;
+  --color-primary-light: #E6F0FA;
+  --color-accent: #F5A800;
+  --color-accent-hover: #E09800;
+  --color-text: #1A1A2E;
+  --color-text-light: #6B7280;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1DA851;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8FAFC;
+  --color-border: #E5E7EB;
+}
+
+@theme {
+  --color-primary: #0057A8;
+  --color-primary-dark: #004080;
+  --color-primary-light: #E6F0FA;
+  --color-accent: #F5A800;
+  --color-accent-hover: #E09800;
+  --color-text-main: #1A1A2E;
+  --color-text-light: #6B7280;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1DA851;
+  --color-bg-alt: #F8FAFC;
+  --color-border: #E5E7EB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a1a1a1; }
+
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.wa-pulse {
+  animation: wa-pulse 2s infinite;
+}
+
+.badge-in-stock { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+.badge-low-stock { background: #fef9c3; color: #854d0e; border: 1px solid #fde68a; }
+.badge-out-of-stock { background: #fecaca; color: #991b1b; border: 1px solid #fca5a5; }

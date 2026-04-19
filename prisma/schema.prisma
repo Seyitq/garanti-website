@@ -1,0 +1,154 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  passwordHash  String
+  name          String
+  role          String   @default("editor") // super_admin, editor, viewer
+  totpSecret    String?
+  totpEnabled   Boolean  @default(false)
+  failedAttempts Int     @default(0)
+  lockedUntil   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Brand {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  slug        String   @unique
+  logoUrl     String?
+  sortOrder   Int      @default(0)
+  metaTitle   String?
+  metaDesc    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  categories  Category[]
+  products    Product[]
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String
+  brandId     String
+  brand       Brand    @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  sortOrder   Int      @default(0)
+  metaTitle   String?
+  metaDesc    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  products    Product[]
+  filterGroups FilterGroupCategory[]
+
+  @@unique([brandId, slug])
+}
+
+model Product {
+  id                String   @id @default(uuid())
+  name              String
+  slug              String
+  oemCode           String
+  brandId           String
+  brand             Brand    @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  categoryId        String
+  category          Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  description       String?
+  compatibleModels  String?  // comma-separated
+  stockQuantity     Int      @default(0)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDesc          String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  images            ProductImage[]
+  specifications    ProductSpec[]
+  attributes        ProductAttribute[]
+
+  @@unique([brandId, categoryId, slug])
+}
+
+model ProductImage {
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  alt       String?
+  sortOrder Int     @default(0)
+}
+
+model ProductSpec {
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  key       String
+  value     String
+  sortOrder Int     @default(0)
+}
+
+model FilterGroup {
+  id         String   @id @default(uuid())
+  name       String   @unique
+  slug       String   @unique
+  sortOrder  Int      @default(0)
+  categories FilterGroupCategory[]
+  values     FilterValue[]
+}
+
+model FilterGroupCategory {
+  filterGroupId String
+  filterGroup   FilterGroup @relation(fields: [filterGroupId], references: [id], onDelete: Cascade)
+  categoryId    String
+  category      Category    @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([filterGroupId, categoryId])
+}
+
+model FilterValue {
+  id            String      @id @default(uuid())
+  filterGroupId String
+  filterGroup   FilterGroup @relation(fields: [filterGroupId], references: [id], onDelete: Cascade)
+  value         String
+  attributes    ProductAttribute[]
+}
+
+model ProductAttribute {
+  id            String      @id @default(uuid())
+  productId     String
+  product       Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  filterValueId String
+  filterValue   FilterValue @relation(fields: [filterValueId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, filterValueId])
+}
+
+model HeroSlide {
+  id          String  @id @default(uuid())
+  title       String
+  subtitle    String?
+  imageUrl    String
+  ctaLink     String?
+  sortOrder   Int     @default(0)
+  isActive    Boolean @default(true)
+}
+
+model ReferenceClient {
+  id        String  @id @default(uuid())
+  name      String
+  logoUrl   String
+  sortOrder Int     @default(0)
+  isActive  Boolean @default(true)
+}
+
+model SiteSetting {
+  key   String @id
+  value String
+}
