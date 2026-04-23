@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Hakkımızda',
-  description: 'Garanti İş Makineleri hakkında bilgi edinin. Ankara merkezli yedek parça sektöründe 20 yıllık deneyim.',
+  description: 'Garanti İş Makineleri 1993\'ten bu yana iş makineleri yedek parça sektöründe kalite ve güvenle hizmet vermektedir. Ostim, Ankara.',
 };
 
 export default function AboutPage() {
@@ -21,9 +21,13 @@ export default function AboutPage() {
         <div className="prose prose-lg max-w-none">
           <h2 className="text-2xl font-bold text-[#1A1A2E] mb-4">Garanti İş Makineleri Tic. ve San. Ltd. Şti.</h2>
           <p className="text-[#6B7280] leading-relaxed mb-6">
-            Garanti İş Makineleri, Ankara merkezli Türkiye&apos;nin önde gelen iş makinesi yedek parça tedarikçilerinden biridir.
-            20 yılı aşkın sektör deneyimimizle, Volvo, Komatsu, Caterpillar, Hidromek, John Deere ve Champion
-            gibi dünya markalarının orijinal ve muadil yedek parçalarını müşterilerimize sunuyoruz.
+            Garanti İş Makineleri 1993 yılından itibaren iş makineleri yedek parça sektöründe tecrübeli çalışanları
+            ile kalite anlayışı ve güven prensibinden ödün vermeden hizmet vermektedir.
+          </p>
+          <p className="text-[#6B7280] leading-relaxed mb-6">
+            Firmamız Champion 7300, VHP 720, 730A, 740A, Volvo G 720B, G 740, G 930, G 940, G 960 Grader,
+            Komatsu D85 Dozer ve Cat D7G Dozer iş makinelerinin yedek parçalarını gerek stoktan
+            gerekse ithalat yoluyla temin ederek müşterilerimize hizmet vermektedir.
           </p>
 
           <h3 className="text-xl font-bold text-[#1A1A2E] mb-3">Vizyonumuz</h3>
@@ -64,7 +68,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-bold text-[#1A1A2E] mb-3">Rakamlarla Biz</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <div className="text-2xl font-bold text-[#0057A8]">20+</div>
+                  <div className="text-2xl font-bold text-[#0057A8]">30+</div>
                   <div className="text-sm text-[#6B7280]">Yıllık Deneyim</div>
                 </div>
                 <div>

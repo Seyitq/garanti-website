@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ['loq.taile1e098.ts.net'],
   turbopack: {
     root: '.',
   },

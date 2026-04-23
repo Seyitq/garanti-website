@@ -5,7 +5,7 @@ import { WHATSAPP_NUMBER } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'İletişim',
-  description: 'Garanti İş Makineleri iletişim bilgileri. Ankara merkezli iş makinesi yedek parça tedarikçisi.',
+  description: 'Garanti İş Makineleri iletişim bilgileri. Ostim Ankara. Tel: 0(312) 385 94 36 - bilgi@garantiismakineleri.com',
 };
 
 export default function ContactPage() {
@@ -35,10 +35,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#1A1A2E] mb-1">Adres</h3>
-                  <p className="text-[#6B7280]">
-                    Garanti İş Makineleri Tic. ve San. Ltd. Şti.
-                  </p>
-                  <p className="text-[#6B7280]">Ankara, Türkiye</p>
+                  <p className="text-[#6B7280] font-medium">Garanti İş Makineleri Tic. ve San. Ltd. Şti.</p>
+                  <p className="text-[#6B7280]">Uzayçağı Bulvarı, 1431. Sokak,</p>
+                  <p className="text-[#6B7280]">Ata İş Merkezi, No: 6/A</p>
+                  <p className="text-[#6B7280]">Ostim / ANKARA</p>
                 </div>
               </div>
             </div>
@@ -50,9 +50,16 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#1A1A2E] mb-1">Telefon</h3>
-                  <a href="tel:+903121234567" className="text-[#0057A8] hover:underline font-medium">
-                    +90 (312) 123 45 67
+                  <a href="tel:+903123859436" className="block text-[#0057A8] hover:underline font-medium">
+                    0(312) 385 94 36
                   </a>
+                  <a href="tel:+903123859437" className="block text-[#0057A8] hover:underline font-medium">
+                    0(312) 385 94 37
+                  </a>
+                  <a href="tel:+903123859421" className="block text-[#0057A8] hover:underline font-medium">
+                    0(312) 385 94 21
+                  </a>
+                  <p className="text-[#6B7280] text-sm mt-1">Faks: 0(312) 385 92 62</p>
                 </div>
               </div>
             </div>
@@ -64,8 +71,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#1A1A2E] mb-1">E-posta</h3>
-                  <a href="mailto:info@garantiismakineleri.com" className="text-[#0057A8] hover:underline font-medium">
-                    info@garantiismakineleri.com
+                  <a href="mailto:bilgi@garantiismakineleri.com" className="text-[#0057A8] hover:underline font-medium">
+                    bilgi@garantiismakineleri.com
                   </a>
                 </div>
               </div>
@@ -97,7 +104,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-[#1A1A2E] mb-6">Konum</h2>
             <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.26834609566!2d32.62269435!3d39.9035557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara%2C%20T%C3%BCrkiye!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.5!2d32.7536!3d39.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f9e6b3b3b3b%3A0x0!2sUzay%C3%A7a%C4%9F%C4%B1+Bulvar%C4%B1+Ostim+Ankara!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

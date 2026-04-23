@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiPlus } from 'react-icons/fi';
 import { getStockInfo } from '@/lib/constants';
+import ProductRowActions from './ProductRowActions';
 
 export default async function AdminProductsPage() {
   const products = await prisma.product.findMany({
@@ -38,6 +39,7 @@ export default async function AdminProductsPage() {
                 <th className="px-4 py-3 font-medium text-[#6B7280]">Kategori</th>
                 <th className="px-4 py-3 font-medium text-[#6B7280]">Stok</th>
                 <th className="px-4 py-3 font-medium text-[#6B7280]">Öne Çıkan</th>
+                <th className="px-4 py-3 font-medium text-[#6B7280]">İşlemler</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -69,6 +71,9 @@ export default async function AdminProductsPage() {
                     </td>
                     <td className="px-4 py-3">
                       {p.isFeatured && <span className="text-xs bg-[#F5A800]/20 text-[#F5A800] px-2 py-0.5 rounded-full font-medium">⭐</span>}
+                    </td>
+                    <td className="px-4 py-3">
+                      <ProductRowActions productId={p.id} productName={p.name} />
                     </td>
                   </tr>
                 );
