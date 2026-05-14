@@ -77,11 +77,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <FiMapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#F5A800]" />
-                <span className="text-sm text-gray-400">Ankara, Türkiye</span>
+                <span className="text-sm text-gray-400">Ostim, Yenimahalle / Ankara</span>
               </li>
               <li className="flex items-center gap-3">
                 <FiPhone className="w-4 h-4 shrink-0 text-[#F5A800]" />
-                <a href="tel:+903121234567" className="text-sm text-gray-400 hover:text-white transition-colors">+90 (312) 123 45 67</a>
+                <a href="tel:+903123859436" className="text-sm text-gray-400 hover:text-white transition-colors">+90 312 385 94 36</a>
               </li>
               <li className="flex items-center gap-3">
                 <FiMail className="w-4 h-4 shrink-0 text-[#F5A800]" />

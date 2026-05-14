@@ -5,7 +5,7 @@ import { WHATSAPP_NUMBER } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'İletişim',
-  description: 'Garanti İş Makineleri iletişim bilgileri. Ostim Ankara. Tel: 0(312) 385 94 36 - bilgi@garantiismakineleri.com',
+  description: 'Garanti İş Makineleri iletişim bilgileri. Ostim, Yenimahalle / Ankara. Tel: 0(312) 385 94 36 - info@garantiismakineleri.com',
 };
 
 export default function ContactPage() {
@@ -38,7 +38,7 @@ export default function ContactPage() {
                   <p className="text-[#6B7280] font-medium">Garanti İş Makineleri Tic. ve San. Ltd. Şti.</p>
                   <p className="text-[#6B7280]">Uzayçağı Bulvarı, 1431. Sokak,</p>
                   <p className="text-[#6B7280]">Ata İş Merkezi, No: 6/A</p>
-                  <p className="text-[#6B7280]">Ostim / ANKARA</p>
+                  <p className="text-[#6B7280]">Ostim, Yenimahalle / Ankara</p>
                 </div>
               </div>
             </div>
@@ -71,8 +71,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#1A1A2E] mb-1">E-posta</h3>
-                  <a href="mailto:bilgi@garantiismakineleri.com" className="text-[#0057A8] hover:underline font-medium">
-                    bilgi@garantiismakineleri.com
+                  <a href="mailto:info@garantiismakineleri.com" className="text-[#0057A8] hover:underline font-medium">
+                    info@garantiismakineleri.com
                   </a>
                 </div>
               </div>

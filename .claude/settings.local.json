@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf \"C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload\")",
+      "Bash(mkdir -p \"C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload\")",
+      "Bash(cp C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-deploy/.next/standalone/server.js C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/server.js)",
+      "Bash(cp C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-deploy/.next/standalone/package.json C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/package.json)",
+      "Bash(cp -r C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-deploy/.next/standalone/node_modules C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/node_modules)",
+      "Bash(cp -r C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-deploy/public C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/public)",
+      "Bash(mkdir -p C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/prisma)",
+      "Bash(mkdir -p C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/.next)",
+      "Bash(cp -r 'C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-deploy/.next/standalone/.next/*' C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/.next/)",
+      "Bash(cp -r C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-deploy/.next/static C:/Users/Seyyid/Documents/ortadogugrup/garanti/garanti-upload/.next/static)"
+    ]
+  }
+}

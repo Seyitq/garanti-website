@@ -19,8 +19,9 @@ export async function POST(req: NextRequest) {
     const ext = path.extname(file.name) || '.png';
     const filename = `${randomUUID()}${ext}`;
 
-    // Ensure uploads directory exists
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
+    // UPLOAD_DIR env ile override edilebilir (VDS'de /var/www/garanti/uploads gibi)
+    // Build'den bağımsız kalıcı bir dizine yaz
+    const uploadDir = process.env.UPLOAD_DIR ?? path.join(process.cwd(), 'public', 'uploads');
     await mkdir(uploadDir, { recursive: true });
 
     const filePath = path.join(uploadDir, filename);

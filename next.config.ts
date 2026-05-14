@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   allowedDevOrigins: ['loq.taile1e098.ts.net'],
-  turbopack: {
-    root: '.',
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: '**' },
